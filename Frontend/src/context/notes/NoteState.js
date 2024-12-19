@@ -3,7 +3,7 @@ import { useContext, useState } from "react";
 import AlertContext from "../AlertContext";
 
 const NoteState = (props) => {
-  const host = "http://localhost:5000"
+  const host = "https://note-app-x2xp.onrender.com"
   const notesInitial = []
   const [notes, setNotes] = useState(notesInitial)
   const { showAlert } = useContext(AlertContext);

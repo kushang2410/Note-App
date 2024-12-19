@@ -1,7 +1,7 @@
 const express = require('express');
 const { body } = require('express-validator');
 const { createUser, loginUser, getUser } = require('../controller/authController');
-const fetchuser = require('../middleware/fetchuser');
+const fetchuser = require('../middleware/FetchUser');
 const router = express.Router();
 
 // Login route - JWT based

@@ -1,4 +1,3 @@
-// components/Login.js
 import React, { useState, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import AlertContext from '../context/AlertContext';
@@ -8,14 +7,14 @@ const Login = () => {
     const [error, setError] = useState(null); 
     let navigate = useNavigate(); 
     const { showAlert } = useContext(AlertContext);
-
+    const host = "https://note-app-x2xp.onrender.com"
     const HandleSubmit = async (e) => {
         e.preventDefault();
     
         const { email, password } = credentials;
     
         try {
-            const response = await fetch('http://localhost:5000/api/auth/login', {
+            const response = await fetch(`${host}/api/auth/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

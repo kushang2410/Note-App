@@ -7,7 +7,7 @@ const SignUp = () => {
   const [error, setError] = useState("");
   let navigate = useNavigate();
   const { showAlert } = useContext(AlertContext);
-
+  const host = "https://note-app-x2xp.onrender.com"
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { name, email, password, conformpassword } = credentials;
@@ -20,7 +20,7 @@ const SignUp = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/auth/createuser", {
+      const response = await fetch(`${host}/api/auth/createuser`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
